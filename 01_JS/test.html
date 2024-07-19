@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트 실습</title>
+    <script>
+      //   let radius = 10;
+      //   let pi = 3.14159265;
+      //   alert(radius * pi);
+
+      // 현재 날짜와 시간
+      //   let date = new Date();
+      //   let year = date.getFullYear();
+      //   let month = date.getMonth() + 1;
+      //   let day = date.getDay();
+      //   let hours = date.getHours();
+      //   let minutes = date.getMinutes();
+      //   let seconds = date.getSeconds();
+      //   console.log(year, month, day, hours, minutes, seconds);
+
+      // 오전과 오후 구분
+      let date = new Date();
+      let hours = date.getHours();
+
+      if (hours < 12) {
+        console.log(`지금은 오전입니다. -  오전 ${hours}시`);
+      }
+      if (hours >= 12) {
+        console.log(`지금은 오후입니다. - 오후 ${hours}시`);
+      }
+    </script>
+  </head>
+  <body>
+    <script src="test.js"></script>
+  </body>
+</html>
