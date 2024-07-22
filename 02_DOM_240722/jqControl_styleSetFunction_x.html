@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수를 이용해 스타일 속성 지정</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        let output = "";
+        for (let i = 0; i < 256; i++) {
+          output += "<div></div>";
+          let colorIndex = Math.floor(i / 85); // 85 = Math.floor(256 / 3)
+          let red, green, blue;
+          if (colorIndex === 0) {
+            red = Math.floor((195 * i) / 255);
+            green = Math.floor((142 * i) / 255);
+            blue = Math.floor((180 * i) / 255);
+          } else if (colorIndex === 1) {
+            red = Math.floor(195 + (31 * (i - 85)) / 170);
+            green = Math.floor(142 + (51 * (i - 85)) / 170);
+            blue = Math.floor(180 + (55 * (i - 85)) / 170);
+          } else {
+            red = Math.floor(226 - (95 * (i - 170)) / 85);
+            green = Math.floor(203 - (75 * (i - 170)) / 85);
+            blue = Math.floor(215 + (15 * (i - 170)) / 85);
+          }
+          output += `<div class="box" style="background-color: rgb(${red},${green},${blue})"></div>`;
+        }
+        document.body.innerHTML = output;
+      });
+    </script>
+    <style>
+      .box {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- .box 클래스를 가진 div 요소들 -->
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </body>
+</html>
