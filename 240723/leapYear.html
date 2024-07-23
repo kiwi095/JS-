@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>leap year</title>
+    <script>
+      const rawInput = prompt("윤년을 확인할 년도를 입력하세요.");
+      const year = Number(rawInput);
+      if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        alert(`입력한 년도(${year})는 윤년입니다.`);
+      } else {
+        alert(`입력한 년도(${year})는 평년입니다.`);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
