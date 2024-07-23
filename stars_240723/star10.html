@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>star 10</title>
+    <script>
+      // 10번
+      // 변수 선언
+      let output = "";
+
+      // 반복문 - 마름모 윗부분
+      for (let i = 0; i <= 4; i++) {
+        for (let j = 5; j > i; j--) {
+          output += " ";
+        }
+        for (let k = 1; k <= 2 * i + 1; k++) {
+          output += "*";
+        }
+        output += " ";
+        output += "\n";
+      }
+
+      // 반복문 - 마름모 아랫부분
+      for (let i = 0; i <= 4; i++) {
+        for (let j = 0; j <= i + 1; j++) {
+          output += " ";
+        }
+        for (let k = 7; k >= 2 * i + 1; k--) {
+          output += "*";
+        }
+        output += " ";
+        output += "\n";
+      }
+
+      // 출력
+      console.log(output);
+    </script>
+  </head>
+  <body></body>
+</html>
