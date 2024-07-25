@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model (3)</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // id로 요소 선택
+        const a = document.querySelector("#a");
+        const b = document.querySelector("#b");
+
+        // textContent는 입력한 값 그대로 출력 (변환 없이)
+        // innerHTML은 입력한 값을 문법에 맞게 변환되어 출력
+        a.textContent = "<h1>textContent 속성</h1>";
+        b.innerHTML = "<h1>textContent 속성</h1>";
+      });
+    </script>
+  </head>
+  <body>
+    <div id="a"></div>
+    <div id="b"></div>
+  </body>
+</html>

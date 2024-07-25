@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>깊은 복사 (1)</title>
+    <!-- 깊은 복사는 두 배열이 완전히 독립적으로 작동, 클론을 만드는 것-->
+    <!-- spread(전개 연산자)를 통해 깊은 복사 가능 -->
+    <script>
+      const list1 = ["우유", "식빵"]; // 배열 생성
+      const list2 = [...list1]; // spread를 사용하여 깊은 복사
+      const list3 = ["토마토", ...list1, "생선"]; // 원하는 위치에 spread하여 요소들의 순서를 바꿀 수 있음.
+      list2.push("오이");
+      list2.push("당근");
+
+      // 출력
+      console.log(list1); // 우유 식빵
+      console.log(list2); // 우유 식빵 오이 당근
+      console.log(list3); // 토마토 우유 식빵 생선
+    </script>
+  </head>
+  <body></body>
+</html>

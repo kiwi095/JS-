@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>깊은 복사 (2)</title>
+    <script>
+      const 구름 = {
+        이름: "구름",
+        나이: 6,
+        종족: "강아지",
+      };
+
+      // spread를 뒤에서 했을 때
+      const 별 = {
+        이름: "별",
+        나이: 1,
+        예방접종: true,
+        ...구름,
+      };
+
+      // spread를 앞에서 했을 때
+      const 달 = {
+        ...구름,
+        이름: "달",
+        나이: 3,
+        예방접종: false,
+      };
+
+      console.log(JSON.stringify(구름)); // 구름 6 강아지
+      console.log(JSON.stringify(별)); // 구름 6 true 강아지
+      console.log(JSON.stringify(달)); // 달 2 강아지 false
+    </script>
+  </head>
+  <body></body>
+</html>
