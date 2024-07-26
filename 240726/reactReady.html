@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- JSX 기본 문법: <태그>{표현식}</태그>, <태그 속성 = {표현식}/> 형태로, 따옴표 사용 X ! -->
+    <!-- 리액트 사용 준비 -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+      // 상수 선언하기
+      const name = "구름";
+      const imgUrl =
+        "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+
+      // 컴포넌트와 컨테이너 생성하기
+      const component = (
+        <div>
+          <h1>{name}님 안녕하세요!</h1>
+          <img src={imgUrl} />
+        </div>
+      );
+
+      const container = document.getElementById("root");
+
+      // 출력하기
+      ReactDOM.render(component, container);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
